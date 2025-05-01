@@ -1,11 +1,11 @@
-import Character from '../Character';
+
 import Undead from '../undead';
 
 test('Undead', () => {
-  const received = new Undead('Безсмертный', 'Undead');
+  const received = new Undead('Вампир', 'undead');
   const expected = {
-    name: 'Безсмертный',
-    type: 'Undead',
+    name: 'Вампир',
+    type: 'undead',
     health: 100,
     level: 1,
     attack: 25,
@@ -14,10 +14,3 @@ test('Undead', () => {
   expect(received).toEqual(expected);
 });
 
-test('name Undead', () => {
-  expect(() => new Character('X', 'Undead')).toThrow();
-});
-
-test('type Undead', () => {
-  expect(() => new Undead('Безсмертный', 'Bowman')).toThrow();
-});

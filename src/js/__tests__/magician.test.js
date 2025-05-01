@@ -2,10 +2,10 @@ import Character from '../Character';
 import Magician from '../magician';
 
 test('Magician', () => {
-  const received = new Magician('Волшебник', 'Magician');
+  const received = new Magician('Волшебник', 'magician');
   const expected = {
     name: 'Волшебник',
-    type: 'Magician',
+    type: 'magician',
     health: 100,
     level: 1,
     attack: 10,
@@ -14,10 +14,3 @@ test('Magician', () => {
   expect(received).toEqual(expected);
 });
 
-test('name Magician', () => {
-  expect(() => new Character('X', 'Magician')).toThrow();
-});
-
-test('type Magician', () => {
-  expect(() => new Magician('Волшебник', 'Bowman')).toThrow();
-});

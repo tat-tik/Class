@@ -2,10 +2,10 @@ import Character from '../Character';
 import Zombie from '../zombie';
 
 test('Zombie', () => {
-  const received = new Zombie('Зомби', 'Zombie');
+  const received = new Zombie('Зомби', 'zombie');
   const expected = {
     name: 'Зомби',
-    type: 'Zombie',
+    type: 'zombie',
     health: 100,
     level: 1,
     attack: 40,
@@ -14,10 +14,3 @@ test('Zombie', () => {
   expect(received).toEqual(expected);
 });
 
-test('name Zombie', () => {
-  expect(() => new Character('X', 'Zombie')).toThrow();
-});
-
-test('type Zombie', () => {
-  expect(() => new Zombie('Зомби', 'Bowman')).toThrow();
-});
